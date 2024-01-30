@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jan 30, 2024 at 03:44 AM
+- Server version: 10.4.32-MariaDB
+- PHP Version: 8.2.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="income" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="income">
+                CREATE TABLE `income` (
+                  `id` int(255) NOT NULL AUTO_INCREMENT,
+                  `text` varchar(255) NOT NULL,
+                  `amount` int(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'income'
+    -->
+    <database name="income">
+        <!-- Table income -->
+        <table name="income">
+            <column name="id">1</column>
+            <column name="text">เงินเดือน</column>
+            <column name="amount">48000</column>
+        </table>
+        <table name="income">
+            <column name="id">2</column>
+            <column name="text">ค่าสอนล่วงเวลา+ป.ตรี</column>
+            <column name="amount">26000</column>
+        </table>
+        <table name="income">
+            <column name="id">5</column>
+            <column name="text">ค่าผ่อนรถ</column>
+            <column name="amount">-7500</column>
+        </table>
+    </database>
+</pma_xml_export>

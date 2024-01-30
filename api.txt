@@ -1,0 +1,42 @@
+install nodejs //ติดตั้งเเล้วไม่ต้องติดตั้ง\
+เปิด cmd เขียน node -v //check version node
+
+เปิดProject
+npm install -g npm@10.4.0//update npm
+npx express-generator --no-view //install package
+npm i 
+npm audit fix --force
+npm i nodemon //ให้อัพเดตโค้ดอัตโนมัต
+เปิดไฟล์package.json เเล้วเพิ่ม dev": "dev": "nodemon ./bin/www"บรรทัดไหม่
+"start":"address"
+
+run Project
+>npm run dev 
+server : 127.0.0.1:3000
+
+เปิดapp.js
+app.use('/income', incomeRouter);ต่อจากบรรทัด19
+const incomeRouter = require('./routes/income');สร้างต่อจากบรรทัด7
+
+สร้างไฟล์ income.js ใน routes
+ไฟล์income.jsเขียน
+const express = require('express');
+var router = express.Router();
+
+router.get('/', incomeContainer.index); 
+module.exports = router;
+
+สร้างโฟล์เดอร์ controller ไว้นอกสุด
+สร้างไฟล์ incomeContainer.js
+ไฟล์incomeContainer.js
+exports.index = (req,res,next)=>{
+
+    res.status(200).json({
+        data:{
+            'message':" I "
+        }
+     
+    })
+}
+เปิดไฟล์ income.js
+const incomeContainer =request('../controller/incomeContainer')
