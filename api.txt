@@ -40,3 +40,11 @@ exports.index = (req,res,next)=>{
 }
 เปิดไฟล์ income.js
 const incomeContainer =request('../controller/incomeContainer')
+
+install mysql2
+>npm i mysql2
+
+สร้างโฟล์เดอร์dbconect
+สร้างไฟล์dbconn.js
+
+install >npm i cors

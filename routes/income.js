@@ -5,4 +5,5 @@ const incomeContainer = require('../controller/incomeContainer')
 
 
 router.get('/', incomeContainer.index); 
+router.delete('/:id', incomeContainer.delete);
 module.exports = router;
