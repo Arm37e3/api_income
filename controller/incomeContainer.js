@@ -1,14 +1,15 @@
 const db = require('../dbconnect/dbconn');
 
-exports.index = (req,res,next)=>{
 
+exports.index = async (req,res,next)=>{
     db.query(
         'SELECT * FROM income',(err, result)=>{
                 res.status(200).json(result);
         }
     )
 }
-exports.delete = (req,res,next)=>{
+
+exports.delete = async(req,res,next)=>{
     try {
         const {id} = req.params;
         console.log(id);
@@ -26,4 +27,24 @@ exports.delete = (req,res,next)=>{
             }
         })
     }
+}
+exports.insert= async(req, res, next) => {
+    const {text , amount} = req.body 
+    console.log(text);
+    console.log(amount);
+    db.query( `INSERT INTO income (text,amount) VALUES(?,?)` ,
+        [text,amount] ,
+        (err, result) => {
+            if(err){
+                console.error('Error inserting data',err);
+                res.status(500).json({
+                    message: 'Error inserting data'
+                })
+            }else{
+                res.status(200).json({
+                    message: 'Income inserted successfully'
+                })
+            }
+        })
+   
 }

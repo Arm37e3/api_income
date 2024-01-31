@@ -43,7 +43,7 @@
             <column name="amount">26000</column>
         </table>
         <table name="income">
-            <column name="id">5</column>
+            <column name="id">3</column>
             <column name="text">ค่าผ่อนรถ</column>
             <column name="amount">-7500</column>
         </table>
